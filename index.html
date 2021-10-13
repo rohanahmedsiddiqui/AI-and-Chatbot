@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Currency converter</h1>
+    <input type="number" id="inp1" placeholder="PKR">
+    <input type="number" id="inp2" placeholder="Dollar">
+    <br><br>
+    <button onclick="converter()">Convert</button>
+    <script>
+            function converter() {
+                let inp1 = document.getElementById("inp1").value
+                let inp2 = document.getElementById("inp2").value
+                let result1 = Number(inp1)/170
+                let result2 = Number(inp2)*170
+                document.getElementById("inp2").value = result1
+                document.getElementById("inp1").value = result2
+            }
+    </script>
+
+        
+    
+    <h1>Grade checker</h1>
+    <input type="number" id="per" placeholder="Enter your percentage">
+    <br><br>
+    <button onclick="check()">Check Grade</button>
+    <h3 id="result"></h3>
+    <script>
+        function check() {
+            let percentage = document.getElementById("per").value
+            
+            if ((percentage >= 80) && (percentage <= 100)) {
+                document.getElementById("result").innerText = "Grade A1"
+            }
+            else if ((percentage >= 70) && (percentage <= 79)) {
+                document.getElementById("result").innerText = "Grade A"
+            }
+            else if ((percentage >= 60) && (percentage <= 69)) {
+                document.getElementById("result").innerText = "Grade B"
+            }
+            else if ((percentage >= 50) && (percentage <= 59)) {
+                document.getElementById("result").innerText = "Grade C"
+            }
+            else if ((percentage >= 33) && (percentage <= 49)) {
+                document.getElementById("result").innerText = "Grade D"
+            }
+            else {
+                document.getElementById("result").innerText = "Failed"
+            }
+
+        }
+    </script>
+
+
+
+</body>
+</html>
